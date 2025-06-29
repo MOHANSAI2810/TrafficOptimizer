@@ -56,7 +56,7 @@ const ShortestPathFinder: React.FC = () => {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:5000/find_shortest_path', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/find_shortest_path`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
