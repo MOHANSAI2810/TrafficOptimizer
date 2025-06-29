@@ -51,6 +51,7 @@ def find_shortest_path():
         return jsonify({'path': path, 'distance': distance})  # Return the path and distance as JSON
     except nx.NetworkXNoPath:
         return jsonify({'error': 'No path exists between the source and destination cities'}), 404
-
+    
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
+
